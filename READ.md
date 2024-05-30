@@ -70,40 +70,40 @@
       rootLogger.level = DEBUG
       rootLogger.appenderRef.stdout.ref = STDOUT
 
-  - log4j2.yml
+- log4j2.yml
     
   
-    Configuration:
-        status: warn
-        name: YAMLConfigTest
-        properties:
-            property:
-            name: filename
-            value: springBootLogFile.log
-        thresholdFilter:
-            level: debug
-        appenders:
-            Console:
-                name: STDOUT
-                target: SYSTEM_OUT
-                PatternLayout:
-                    Pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1} - %msg%n"
-            File:
-                name: File
-                fileName: ${filename}
-                PatternLayout:
-                    Pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1} - %msg%n"
-        Loggers:
-            logger:
-                name: com.tatek.how_to_use_log4j_in_SpringBootApplication
-                level: debug
-                additivity: false
-                AppenderRef:
-                    ref: File
-        Root:
-            level: INFO
-            AppenderRef:
-                ref: STDOUT
+      Configuration:
+          status: warn
+          name: YAMLConfigTest
+          properties:
+              property:
+              name: filename
+              value: springBootLogFile.log
+          thresholdFilter:
+              level: debug
+          appenders:
+              Console:
+                  name: STDOUT
+                  target: SYSTEM_OUT
+                  PatternLayout:
+                      Pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1} - %msg%n"
+              File:
+                  name: File
+                  fileName: ${filename}
+                  PatternLayout:
+                      Pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1} - %msg%n"
+          Loggers:
+              logger:
+                  name: com.tatek.how_to_use_log4j_in_SpringBootApplication
+                  level: debug
+                  additivity: false
+                  AppenderRef:
+                      ref: File
+          Root:
+              level: INFO
+              AppenderRef:
+                  ref: STDOUT
 
  
 
