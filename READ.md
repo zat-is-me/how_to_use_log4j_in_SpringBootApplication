@@ -71,8 +71,8 @@
       rootLogger.appenderRef.stdout.ref = STDOUT
 
   - log4j2.yml
-
     
+  
     Configuration:
         status: warn
         name: YAMLConfigTest
@@ -93,7 +93,6 @@
                 fileName: ${filename}
                 PatternLayout:
                     Pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%t] %c{1} - %msg%n"
-        
         Loggers:
             logger:
                 name: com.tatek.how_to_use_log4j_in_SpringBootApplication
